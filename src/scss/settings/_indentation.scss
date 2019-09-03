@@ -1,0 +1,84 @@
+@import './maps.scss';
+
+// margins
+/* <div class="mt--10"></div> */
+.mt {
+  @each $label, $size in $sizes {
+    &--#{$label} {
+      margin-top: $size;
+    }
+  }
+}
+/* <div class="mb--10"></div> */
+.mb {
+  @each $label, $size in $sizes {
+    &--#{$label} {
+      margin-bottom: $size;
+    }
+  }
+}
+/* <div class="mr--10"></div> */
+.mr {
+  @each $label, $size in $sizes {
+    &--#{$label} {
+      margin-right: $size;
+    }
+  }
+}
+/* <div class="ml--10"></div> */
+.ml {
+  @each $label, $size in $sizes {
+    &--#{$label} {
+      margin-left: $size;
+    }
+  }
+}
+/* <div class="m-all--10"></div> */
+.m-all {
+  @each $label, $size in $sizes {
+    &--#{$label} {
+      margin: $size;
+    }
+  }
+}
+
+// paddings
+/* <div class="pt--10"></div> */
+.pt {
+  @each $label, $size in $sizes {
+    &--#{$label} {
+      padding-top: $size;
+    }
+  }
+}
+/* <div class="pb--10"></div> */
+.pb {
+  @each $label, $size in $sizes {
+    &--#{$label} {
+      padding-bottom: $size;
+    }
+  }
+}
+/* <div class="pr--10"></div> */
+.pr {
+  @each $label, $size in $sizes {
+    &--#{$label} {
+      padding-right: $size;
+    }
+  }
+}
+.pl {
+  @each $label, $size in $sizes {
+    &--#{$label} {
+      padding-left: $size;
+    }
+  }
+}
+/* <div class="p-all--10"></div> */
+.p-all {
+  @each $label, $size in $sizes {
+    &--#{$label} {
+      padding: $size;
+    }
+  }
+}

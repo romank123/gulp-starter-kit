@@ -1,0 +1,106 @@
+@import './maps.scss';
+@import './fonts.scss';
+
+/* <div class="text [[ утилитарный класс ширины, размера и проч. ]]"></div> */
+.text {
+  /* Шрифты */
+  /* <div class="text text--base"></div> */
+  /* Заголовочный */
+  &--heading {
+    font-family: $heading;
+  }
+  /* Базовый */
+  &--base {
+    font-family: $base;
+  }
+
+  /* Толщина начертания шрифта */
+  /* <div class="text weight--300"></div> */
+  &.weight {
+    &--300 {
+      font-weight: 300;
+    }
+
+    &--normal {
+      font-weight: normal;
+    }
+
+    &--bold {
+      font-weight: bold;
+    }
+  }
+
+  /* Выравнивание текста */
+  /* <div class="text align--center"></div> */
+  &.align {
+    &--right {
+      text-align: right;
+    }
+    &--center {
+      text-align: center;
+    }
+    &--justify {
+      text-align: justify;
+    }
+  }
+
+  /* Трансформации текста */
+  /* <div class="text transform--upper"></div> */
+  &.transform {
+    &--upper {
+      text-transform: uppercase;
+    }
+    &--lower {
+      text-transform: lowercase;
+    }
+    &--none {
+      text-transform: none;
+    }
+  }
+
+  &.decor {
+    &--none {
+      text-decoration: none;
+    }
+
+    &--under {
+      text-decoration: underline;
+    }
+  }
+
+  /* Стиль начертания */
+  /* <div class="text style--italic"></div> */
+  &.style {
+    &--italic {
+      font-style: italic;
+    }
+  }
+
+  /* Размер кегля в пикселях */
+  /* <div class="text size--16"></div> */
+  &.size {
+    @each $sizeLabel, $size in $text-sizes {
+      &--#{$sizeLabel} {
+        font-size: $size;
+      }
+    }
+  }
+
+  &.lh {
+    @each $sizeLabel, $size in $text-sizes {
+      &--#{$sizeLabel} {
+        line-height: $size;
+      }
+    }
+  }
+
+  /* Цвет текста */
+  /* <div class="text color--orange"></div> */
+  &.color {
+    @each $color, $value in $global-colors {
+      &--#{$color} {
+        color: $value;
+      }
+    }
+  }
+}

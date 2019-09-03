@@ -1,0 +1,12 @@
+::selection {
+  background-color: $accent;
+  color: $white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
