@@ -9,3 +9,7 @@ NodeJS, npm, gulp-cli
 ## Установка
 
 > npm i
+
+## Запуск
+
+> gulp dev
